@@ -659,13 +659,14 @@
                         <div class="contact-left-title">
                             <h1>Get in Touch</h1>
                         </div>
-                        <div class="conmi">
-
-                            <input type="text" name="name" placeholder="Name" class="send-inputs">
-                            <input type="email" name="email" placeholder="Email" class="send-inputs">
-                            <textarea name="message" placeholder="Message" class="send-inputs"></textarea>
-                            <button type="submit"> Submit</button>
-                        </div>
+                        <form class="conmi" id="contact-form" novalidate>
+                            <input type="text" name="name" placeholder="Name" class="send-inputs" required minlength="2" maxlength="80">
+                            <input type="email" name="email" placeholder="Email" class="send-inputs" required maxlength="120">
+                            <textarea name="message" placeholder="Message" class="send-inputs" required minlength="10" maxlength="1200"></textarea>
+                            <input type="text" name="company_website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            <button type="submit" id="contact-submit-btn">Submit</button>
+                            <p id="form-status" class="form-status" aria-live="polite"></p>
+                        </form>
                         <samp class="c-on"></samp>
                         <samp class="c-on1"></samp>
                         <samp class="c-on2"></samp>
@@ -739,12 +740,15 @@
                 document.body.classList.add("dark-mode");
             }
 
-            dark.onclick = function () {
-                document.body.classList.toggle("dark-mode");
-                var isDark = document.body.classList.contains("dark-mode");
-                localStorage.setItem("theme", isDark ? "dark" : "light");
+            if (dark) {
+                dark.onclick = function () {
+                    document.body.classList.toggle("dark-mode");
+                    var isDark = document.body.classList.contains("dark-mode");
+                    localStorage.setItem("theme", isDark ? "dark" : "light");
+                };
             }
         </script>
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script src="script.js"></script>
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

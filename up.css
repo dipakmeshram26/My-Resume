@@ -3249,6 +3249,35 @@ i {
     background: linear-gradient(170deg, rgba(187, 255, 0, 0.731), rgba(255, 174, 0, 0.689));
 }
 
+.contact-left button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.form-status {
+    min-height: 22px;
+    margin-top: 8px;
+    color: #f0ecec;
+    font-size: 14px;
+    text-align: center;
+}
+
+.form-status.success {
+    color: #9ef7a9;
+}
+
+.form-status.error {
+    color: #ffb8b8;
+}
+
+.hp-field {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+}
+
 #cont-sides:hover .c-on {
     position: absolute;
     z-index: -20;
