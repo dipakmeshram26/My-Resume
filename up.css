@@ -197,8 +197,10 @@ label {
     filter: drop-shadow(0px 0px 14px rgb(255, 65, 248));
 }
 
-.nav .btn .button h3 {
-    font-size: 0.45vh;
+.nav .btn button h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.1;
     /* text-shadow: 1px 14px 40px red, 0 0 1em blue, 0 0 0.2em blue; */
 }
 
@@ -4077,6 +4079,70 @@ footer p{
         font-size: 1rem;
     }
 } */
+
+/* Typography normalization for consistent professional sizing */
+body {
+    line-height: 1.55;
+}
+
+.nav .n-items a,
+.nav .dropbtn {
+    font-size: 0.98rem;
+    font-weight: 500;
+}
+
+.home h2 {
+    font-size: clamp(1.75rem, 2.4vw, 2.45rem);
+}
+
+.home h1 {
+    font-size: clamp(2.35rem, 5vw, 4.2rem);
+    line-height: 1.1;
+    word-spacing: -8px;
+}
+
+.home p {
+    font-size: clamp(1rem, 1.25vw, 1.15rem);
+    line-height: 1.7;
+}
+
+#services .ser-head h2,
+#skills .skill-head h2,
+#blogs .blo-head h2,
+#client .cl-head h2,
+#contact .contact-title h1 {
+    font-size: clamp(1.55rem, 2.6vw, 2.45rem);
+}
+
+#services .ser-head h1,
+#skills .skill-head h1,
+#blogs .blo-head h1,
+#client .cl-head h1 {
+    font-size: clamp(1.85rem, 3.2vw, 2.9rem);
+    line-height: 1.2;
+}
+
+.ser-info h1,
+.p-items .select .disc h3,
+.b-categary .b-items .b-disc h1,
+.contact-right h1,
+.contact-left-title h1 {
+    font-size: clamp(1.1rem, 1.7vw, 1.55rem);
+}
+
+.ser-info p,
+.b-categary .b-items .b-disc p,
+.contact-discrip p,
+.contact-right p,
+.right .into .infos p,
+.right .into p {
+    font-size: clamp(0.95rem, 1.05vw, 1.06rem);
+    line-height: 1.65;
+}
+
+footer p {
+    font-size: 0.95rem;
+}
 
 @media only screen and (max-width: 768px) {
     .home p {
