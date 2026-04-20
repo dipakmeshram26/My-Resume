@@ -4085,6 +4085,19 @@ body {
     line-height: 1.55;
 }
 
+/* Performance optimization: keep UI effects, reduce only the heaviest continuous motion */
+.home .speed img:nth-last-child(1),
+.speed img:nth-last-child(2) {
+    animation-duration: 8s;
+    animation-timing-function: linear;
+}
+
+.back1,
+.back4 {
+    animation-duration: 28s;
+    will-change: transform;
+}
+
 .nav .n-items a,
 .nav .dropbtn {
     font-size: 0.98rem;

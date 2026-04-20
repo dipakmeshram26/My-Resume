@@ -745,9 +745,13 @@
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
             AOS.init({
-                duration: 1000,   // animation speed
-                once: true        // animation ek hi baar chale
+                duration: 650,
+                offset: 40,
+                once: true,
+                disable: reduceMotion
             });
         </script>
 

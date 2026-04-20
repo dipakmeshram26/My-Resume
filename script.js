@@ -1,8 +1,18 @@
-var home = document.querySelector(".home")
+var home = document.querySelector(".home");
+var dot = document.querySelector(".dot");
 
-var dot = document.querySelector(".dot")
+if (home && dot) {
+    var rafId = null;
 
-home.addEventListener("mousemove", function(dotss){
-    dot.style.left = dotss.clientX + "px"
-    dot.style.top = dotss.clientY + "px"
-})
+    home.addEventListener("mousemove", function (event) {
+        if (rafId) {
+            return;
+        }
+
+        rafId = requestAnimationFrame(function () {
+            dot.style.left = event.clientX + "px";
+            dot.style.top = event.clientY + "px";
+            rafId = null;
+        });
+    }, { passive: true });
+}
