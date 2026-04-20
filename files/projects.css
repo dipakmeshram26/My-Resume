@@ -1,16 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
 :root {
-    --bg: #07090f;
-    --bg-elevated: rgba(16, 20, 32, 0.82);
-    --panel: rgba(255, 255, 255, 0.05);
-    --panel-strong: rgba(255, 255, 255, 0.08);
-    --text: #e9edf7;
-    --muted: #a8b0c2;
-    --accent: #7dd3fc;
-    --accent-2: #f59e0b;
-    --line: rgba(255, 255, 255, 0.10);
-    --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+    --bg: #080808;
+    --bg-elevated: rgba(34, 1, 29, 0.42);
+    --panel: rgba(255, 255, 255, 0.04);
+    --panel-strong: rgba(255, 255, 255, 0.07);
+    --text: #edf2fc;
+    --muted: rgba(166, 160, 160, 0.75);
+    --accent: rgb(233, 7, 165);
+    --accent-2: rgb(11, 11, 136);
+    --line: rgba(244, 165, 220, 0.22);
+    --shadow: 0 0 28px rgba(179, 7, 173, 0.25);
+    --text-glow: 0px 0px 60px rgba(255, 0, 85, 0.35);
+    --btn-glow: 0 0 22px rgba(179, 7, 173, 0.55);
 }
 
 * {
@@ -25,9 +27,9 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     background:
-        radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), transparent 28%),
-        radial-gradient(circle at top right, rgba(245, 158, 11, 0.12), transparent 24%),
-        linear-gradient(180deg, #05070c 0%, #090d16 52%, #05070c 100%);
+        radial-gradient(circle at top left, rgba(233, 7, 165, 0.2), transparent 30%),
+        radial-gradient(circle at top right, rgba(11, 11, 136, 0.2), transparent 30%),
+        linear-gradient(180deg, #080808 0%, #060308 55%, #080808 100%);
     color: var(--text);
 }
 
@@ -50,7 +52,7 @@ a {
     padding: 16px 18px;
     border: 1px solid var(--line);
     border-radius: 20px;
-    background: rgba(7, 9, 15, 0.72);
+    background: linear-gradient(to right, rgb(5, 2, 7), rgb(30, 3, 15), rgb(0, 0, 0));
     backdrop-filter: blur(18px);
     box-shadow: var(--shadow);
     position: sticky;
@@ -68,7 +70,10 @@ a {
     font-size: 0.82rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: var(--accent);
+    background: linear-gradient(to right, red, blue);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
     font-weight: 700;
 }
 
@@ -88,15 +93,15 @@ a {
     border-radius: 999px;
     border: 1px solid var(--line);
     color: var(--muted);
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.02);
     transition: transform 180ms ease, border-color 180ms ease, color 180ms ease, background 180ms ease;
 }
 
 .top-links a:hover {
     transform: translateY(-1px);
-    border-color: rgba(125, 211, 252, 0.5);
+    border-color: rgba(244, 165, 220, 0.5);
     color: var(--text);
-    background: rgba(125, 211, 252, 0.08);
+    background: rgba(233, 7, 165, 0.12);
 }
 
 .hero {
@@ -113,6 +118,11 @@ a {
     font-size: clamp(2.2rem, 4vw, 4.8rem);
     line-height: 0.96;
     letter-spacing: -0.05em;
+    background: linear-gradient(to right, red, blue);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: var(--text-glow);
 }
 
 .hero p,
@@ -128,8 +138,18 @@ a {
     padding: 22px;
     border-radius: 24px;
     border: 1px solid var(--line);
-    background: linear-gradient(180deg, rgba(125, 211, 252, 0.10), rgba(255, 255, 255, 0.03));
+    background: linear-gradient(150deg, rgba(233, 7, 165, 0.12), rgba(11, 11, 136, 0.12));
     box-shadow: var(--shadow);
+}
+
+.hero-card h2,
+.section-title h2,
+.panel h2 {
+    background: linear-gradient(to right, red, blue);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0px 0px 24px rgba(255, 0, 85, 0.28);
 }
 
 .hero-card h2 {
@@ -178,6 +198,13 @@ a {
     background: var(--bg-elevated);
     box-shadow: var(--shadow);
     min-height: 100%;
+    transition: transform 260ms ease, box-shadow 260ms ease, border-color 260ms ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(244, 165, 220, 0.45);
+    box-shadow: 0 0 38px rgba(179, 7, 173, 0.42);
 }
 
 .project-card.featured {
@@ -188,7 +215,7 @@ a {
 
 .project-media {
     position: relative;
-    background: #0d1320;
+    background: #120712;
     min-height: 220px;
 }
 
@@ -209,7 +236,7 @@ a {
     top: 16px;
     padding: 8px 12px;
     border-radius: 999px;
-    background: rgba(7, 9, 15, 0.75);
+    background: rgba(24, 4, 23, 0.82);
     border: 1px solid rgba(255, 255, 255, 0.12);
     color: var(--text);
     font-size: 0.8rem;
@@ -227,6 +254,8 @@ a {
 .project-body h3 {
     margin: 0;
     font-size: 1.3rem;
+    color: var(--text);
+    text-shadow: 0px 0px 14px rgba(233, 7, 165, 0.22);
 }
 
 .project-body p {
@@ -244,9 +273,9 @@ a {
 .tech-list span {
     padding: 8px 10px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: #d7def0;
+    background: rgba(233, 7, 165, 0.09);
+    border: 1px solid rgba(244, 165, 220, 0.25);
+    color: #f4f0f0;
     font-size: 0.84rem;
 }
 
@@ -273,14 +302,26 @@ a {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #7dd3fc, #38bdf8);
-    color: #04101a;
+    background: linear-gradient(150deg, rgb(233, 7, 165), rgb(11, 11, 136));
+    color: #f4f0f0;
+    text-shadow: 1px 1px 20px rgb(235, 8, 8), 0 0 1em rgb(70, 16, 59), 0 0 0.2em rgba(0, 0, 255, 0.001);
+    box-shadow: var(--btn-glow);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(150deg, rgb(244, 165, 220), rgb(41, 41, 215));
+    box-shadow: 0 0 28px rgba(179, 7, 173, 0.7);
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: rgba(255, 255, 255, 0.10);
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(244, 165, 220, 0.25);
     color: var(--text);
+}
+
+.btn-secondary:hover {
+    border-color: rgba(244, 165, 220, 0.45);
+    background: rgba(233, 7, 165, 0.12);
 }
 
 .detail-hero {
@@ -305,8 +346,8 @@ a {
 .meta-row span {
     padding: 8px 12px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(233, 7, 165, 0.08);
+    border: 1px solid rgba(244, 165, 220, 0.25);
     color: var(--muted);
     font-size: 0.85rem;
 }
@@ -321,7 +362,7 @@ a {
 .panel {
     border-radius: 24px;
     border: 1px solid var(--line);
-    background: rgba(16, 20, 32, 0.82);
+    background: linear-gradient(160deg, rgba(53, 1, 66, 0.35), rgba(11, 3, 26, 0.5));
     box-shadow: var(--shadow);
     padding: 22px;
 }
@@ -365,9 +406,17 @@ a {
     gap: 12px;
     padding: 12px 14px;
     border-radius: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(244, 165, 220, 0.22);
+    background: rgba(233, 7, 165, 0.08);
     color: var(--text);
+    transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.link-stack a:hover {
+    transform: translateY(-2px);
+    border-color: rgba(244, 165, 220, 0.44);
+    background: rgba(233, 7, 165, 0.16);
+    box-shadow: 0 0 20px rgba(179, 7, 173, 0.35);
 }
 
 .link-stack a span {

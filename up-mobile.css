@@ -12,9 +12,9 @@
     font-size: 22px;
     position: absolute;
     left: 16px;
-    top: 8px;
+    top: 12px;
     cursor: pointer;
-    transition: all 1s ease-in-out;
+    transition: all 0.35s ease-in-out;
 }
 
 .btn-one i {
@@ -26,13 +26,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    left: -450px;
-    height: 65vh;
+    left: -100%;
+    height: 72vh;
     width: 100%;
     /* backdrop-filter: blur(10px); */
-    background-color: rgb(48, 50, 49);
+    background: linear-gradient(to right, rgb(5, 2, 7), rgb(30, 3, 15), rgb(0, 0, 0));
+    border-bottom: 1px solid rgba(204, 107, 190, 0.28);
     /* box-shadow: 0 0 5px rgb(247, 234, 234, 0.5); */
-    transition: 1s ease-in-out;
+    transition: 0.35s ease-in-out;
 }
 
 
@@ -40,11 +41,12 @@
     color: rgb(212, 204, 204);
     font-size: 20px;
     position: absolute;
-    left: 320px;
+    right: 16px;
+    left: auto;
     top: 6px;
     opacity: 0;
     cursor: pointer;
-    transition: 1s ease-in-out;
+    transition: 0.35s ease-in-out;
 }
 
 .side-manu .manu {
@@ -89,7 +91,7 @@ label {
 #check:checked~.side-manu .btn-two i {
     opacity: 5;
     position: absolute;
-    top: 1;
+    top: 1px;
     z-index: 5;
 }
 
@@ -103,16 +105,15 @@ label {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    position: none;
+    position: relative;
 
 
 }
 
 .nav .nav-items {
     flex-direction: column;
-            position: absolute;
-      
-        top: 10px;
+    position: absolute;
+    top: 14px;
     justify-content: space-evenly
 }
 
@@ -130,25 +131,28 @@ label {
 }
 
 .nav .n-items a {
-    padding: 12px 4px;
+    padding: 11px 8px;
     margin: 5px 8px;
-    width: 200%;
+    width: 180%;
     font-size: 16px;
-    box-shadow: 0px 0px 1px rgba(255, 235, 205, 0.697);
+    border-radius: 8px;
+    box-shadow: 0px 0px 1px rgba(255, 235, 205, 0.45);
     background-color: rgb(11, 4, 11, 0.5);
 }
 
 .dropdown {
     display: block;
-    padding: 8px 2px;
+    padding: 8px 6px;
     margin: 5px 8px;
-    box-shadow: 0px 0px 1px rgba(255, 235, 205, 0.697);
+    border-radius: 8px;
+    box-shadow: 0px 0px 1px rgba(255, 235, 205, 0.45);
     background-color: rgb(11, 4, 11, 0.5);
-    width: 207%;
+    width: 185%;
 }
 
 .dropdown .dropbtn {
     font-size: 15px;
+    width: 100%;
 }
 
 .nav .dropdown-content {
