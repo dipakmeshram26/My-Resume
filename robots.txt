@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.augionixtechnologies.com/sitemap.xml
+Sitemap: https://augionix-technologies.netlify.app/sitemap.xml

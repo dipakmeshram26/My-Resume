@@ -89,7 +89,7 @@ Each project has a dedicated detail page inside the `files/projects` folder.
 ## Contact
 
 - Email: buildwithdip@gmail.com
-- Website: https://www.augionixtechnologies.com
+- Website: https://augionix-technologies.netlify.app/
 - LinkedIn: @dip_meshram
 - GitHub: dipakmeshram26
 
