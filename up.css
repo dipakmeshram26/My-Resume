@@ -2507,6 +2507,7 @@ i {
     margin: 10px;
     margin-bottom: 1px;
     border-radius: 6px;
+    object-fit: cover;
     filter: drop-shadow(1px 1px 15px rgb(87, 10, 62))
 }
 
@@ -3566,7 +3567,7 @@ footer p{
 
     .right {
         width: 67%;
-        height: 45vh;
+        height: 70vh;
         padding: 5px;
     }
 
