@@ -1,4 +1,4 @@
-# Dipak Meshram | Portfolio Resume Website
+﻿# Dipak Meshram | Portfolio Resume Website
 
 Professional personal portfolio and resume website for Dipak Meshram, Founder of Augionix Technologies and an independent freelance web developer.
 
@@ -65,31 +65,31 @@ Each project has a dedicated detail page inside the `files/projects` folder.
 
 ```text
 .
-├── index.html
-├── README.md
-├── script.js
-├── up.css
-├── up-mobile.css
-├── darkmode/
-├── files/
-│   ├── blog.html
-│   ├── blogs.css
-│   ├── about.html
-│   ├── about.css
-│   └── projects/
-│       ├── index.html
-│       ├── projects.css
-│       ├── project-portfolio.html
-│       ├── project-chrome.html
-│       ├── project-rental.html
-│       └── project-blog-terminal.html
-└── img/
+â”œâ”€â”€ index.html
+â”œâ”€â”€ README.md
+â”œâ”€â”€ script.js
+â”œâ”€â”€ up.css
+â”œâ”€â”€ up-mobile.css
+â”œâ”€â”€ darkmode/
+â”œâ”€â”€ files/
+â”‚   â”œâ”€â”€ blog.html
+â”‚   â”œâ”€â”€ blogs.css
+â”‚   â”œâ”€â”€ about.html
+â”‚   â”œâ”€â”€ about.css
+â”‚   â””â”€â”€ projects/
+â”‚       â”œâ”€â”€ index.html
+â”‚       â”œâ”€â”€ projects.css
+â”‚       â”œâ”€â”€ project-portfolio.html
+â”‚       â”œâ”€â”€ project-chrome.html
+â”‚       â”œâ”€â”€ project-rental.html
+â”‚       â””â”€â”€ project-blog-terminal.html
+â””â”€â”€ img/
 ```
 
 ## Contact
 
 - Email: buildwithdip@gmail.com
-- Website: https://augionix-technologies.netlify.app/
+- Website: https://dip-portfolio-web.netlify.app/
 - LinkedIn: @dip_meshram
 - GitHub: dipakmeshram26
 
@@ -102,3 +102,4 @@ Each project has a dedicated detail page inside the `files/projects` folder.
 ## License
 
 Personal portfolio content and design. All rights reserved unless stated otherwise.
+
