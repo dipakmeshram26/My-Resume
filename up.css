@@ -2390,7 +2390,7 @@ i {
 
 .p-items .select {
     background: linear-gradient(to right, rgb(112 0 255 / 7%), rgb(220 20 183 / 11%));
-    width: 48vh;
+    width: 60vh;
     height: 40vh;
     /* margin: 10px 20px; */
     display: flex;
@@ -2522,6 +2522,7 @@ i {
 
 .p-items .select .disc h3 {
     color: #afafaf;
+        font-size: 20px;
 
 }
 
@@ -4175,7 +4176,6 @@ body {
 }
 
 .ser-info h1,
-.p-items .select .disc h3,
 .b-categary .b-items .b-disc h1,
 .contact-right h1,
 .contact-left-title h1 {
