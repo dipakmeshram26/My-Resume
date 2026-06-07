@@ -1,19 +1,91 @@
 var home = document.querySelector(".home");
-var dot = document.querySelector(".dot");
+var chomeSection = document.getElementById("chome");
 
-if (home && dot) {
-    var rafId = null;
+if (home && chomeSection && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    var cursorRing = document.createElement("span");
+    cursorRing.className = "cursor-ring";
 
-    home.addEventListener("mousemove", function (event) {
-        if (rafId) {
+    var cursorOrb = document.createElement("span");
+    cursorOrb.className = "cursor-orb";
+
+    document.body.appendChild(cursorRing);
+    document.body.appendChild(cursorOrb);
+
+    var mouseX = window.innerWidth / 2;
+    var mouseY = window.innerHeight / 2;
+    var ringX = mouseX;
+    var ringY = mouseY;
+    var orbX = mouseX;
+    var orbY = mouseY;
+    var isCursorActive = false;
+    var lastBitTime = 0;
+    var hackerChars = ["0", "1", "#", "<", ">", "{", "}", "/", "$", "_"];
+
+    function setCursorOpacity(opacity) {
+        cursorRing.style.opacity = opacity;
+        cursorOrb.style.opacity = opacity;
+    }
+
+    function spawnBits(x, y) {
+        var now = performance.now();
+        if (now - lastBitTime < 35) {
             return;
         }
+        lastBitTime = now;
 
-        rafId = requestAnimationFrame(function () {
-            dot.style.left = event.clientX + "px";
-            dot.style.top = event.clientY + "px";
-            rafId = null;
-        });
+        for (var i = 0; i < 3; i += 1) {
+            var bit = document.createElement("span");
+            bit.className = "cursor-bit";
+            bit.textContent = hackerChars[Math.floor(Math.random() * hackerChars.length)];
+            bit.style.left = x + "px";
+            bit.style.top = y + "px";
+            bit.style.setProperty("--bit-x", (Math.random() * 56 - 28).toFixed(2) + "px");
+            bit.style.setProperty("--bit-y", (Math.random() * 56 - 28).toFixed(2) + "px");
+            bit.style.setProperty("--bit-r", Math.round(Math.random() * 320 - 160) + "deg");
+
+            document.body.appendChild(bit);
+
+            bit.addEventListener("animationend", function () {
+                this.remove();
+            });
+        }
+    }
+
+    function updateCursor() {
+        ringX += (mouseX - ringX) * 0.2;
+        ringY += (mouseY - ringY) * 0.2;
+        orbX += (mouseX - orbX) * 0.34;
+        orbY += (mouseY - orbY) * 0.34;
+
+        cursorRing.style.left = ringX + "px";
+        cursorRing.style.top = ringY + "px";
+        cursorOrb.style.left = orbX + "px";
+        cursorOrb.style.top = orbY + "px";
+
+        requestAnimationFrame(updateCursor);
+    }
+
+    requestAnimationFrame(updateCursor);
+
+    chomeSection.addEventListener("mouseenter", function () {
+        isCursorActive = true;
+        document.body.classList.add("hacker-cursor-enabled");
+        setCursorOpacity("1");
+    });
+
+    chomeSection.addEventListener("mouseleave", function () {
+        isCursorActive = false;
+        document.body.classList.remove("hacker-cursor-enabled");
+        setCursorOpacity("0");
+    });
+
+    window.addEventListener("mousemove", function (event) {
+        mouseX = event.clientX;
+        mouseY = event.clientY;
+
+        if (isCursorActive) {
+            spawnBits(mouseX, mouseY);
+        }
     }, { passive: true });
 }
 
