@@ -433,10 +433,11 @@ i {
 
 #skills .skill-head p {
     position: static;
-    margin: 20px;
-    width: 120px;
-    height: 4vh;
+    margin: 16px 0 18px;
+    width: auto;
+    height: auto;
     font-size: 14px;
+    line-height: 1.7;
 }
 
 
@@ -988,38 +989,57 @@ i {
  */
 
 #client {
-    display: none;
-    width: 99%;
+    display: flex;
+    width: 100%;
     height: auto;
     flex-direction: column;
-    position: static;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
+#client .cl-head {
+    width: 90%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#client .cl-head h2 {
+    font-size: 6vw !important;
+}
+
+#client .cl-head h1 {
+    font-size: 1.5rem !important;
+}
 
 #client .cl-items {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#client .cl-i1,
-.cl-i2 {
     width: 90%;
-    height: 30vh;
-    position: static;
-    padding: 6px
+    gap: 20px;
 }
 
-#client .cl-i2 {
-    width: 90%;
-    height: 30vh;
-    position: static;
-    padding: 6px
+#client .cl-card {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 24px;
 }
 
-#client .cl-i1 p {
-    font-size: 4vw;
-    position: static;
+#client .cl-text {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#client .cl-name {
+    font-size: 1rem;
+}
+
+#client .cl-role {
+    font-size: 0.8rem;
 }
 
 
@@ -1143,59 +1163,118 @@ i {
 
 /* footer */
 .footer {
-    width: 100%;
-    padding: 4px;
-    height: auto;
-    justify-content: center;
+    width: 90%;
+    padding: 40px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
     text-align: center;
-    flex-wrap: wrap;
+    margin: 40px auto 0 auto;
 }
 
 .footer .left {
-    width: 80%;
-        height: 22vh;
-    margin: 10px;
-    padding: 5px;
-            font-size: 3.7vw;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
-.footer .left .f-logo img {
-    height: 6vh;
+.footer .left h2 {
+    font-size: 1.5rem;
+}
+
+.footer .left .f-bio {
+    font-size: 0.85rem;
+    max-width: 320px;
+    line-height: 1.5;
+}
+
+.footer .left .f-share {
+    width: 100%;
+    align-items: center;
+}
+
+.footer .left .f-share-item {
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer .left .f-share-item h3 {
+    font-size: 0.85rem;
 }
 
 .footer .center {
-    width: 45%;
-    padding: 2px;
-    height: 22vh;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .footer .center h2 {
-    font-size: 17px;
-    padding: 10px;
+    font-size: 1.3rem;
+    padding: 0;
+    display: inline-block;
+}
 
+.footer .center h2::after {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .footer .center .in {
-    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 5px;
+    width: 100%;
 }
 
 .footer .center .in a {
-    width: 32%;
-    padding: 2px;
-    margin: 5px;
-    font-size: 15px;
+    width: auto;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    margin: 0;
+}
+
+.footer .center .in a:hover {
+    transform: none;
 }
 
 .footer .right {
     width: 100%;
     height: auto;
-}
-
-.r-share img {
-    margin: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
 }
 
 .footer .right h1 {
-    font-size: 2.3vh;
-    margin-bottom: 5px;
+    font-size: 1.3rem;
+    text-align: center;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.footer .right h1::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer .right .f-sub-text {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.footer .right .r-share {
+    justify-content: center;
+    margin-top: 5px;
 }

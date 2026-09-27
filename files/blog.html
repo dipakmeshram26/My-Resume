@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,8 +19,15 @@
     <meta name="twitter:description" content="Frontend and web development articles and project writeups.">
     <link rel="canonical" href="https://dip-portfolio-web.netlify.app/files/blog.html">
 
-    <link rel="stylesheet" href="/up.css">
+    <link rel="stylesheet" href="../up.css">
+    <link rel="stylesheet" media="screen and (max-width: 412px)" href="../up-mobile.css">
     <link rel="stylesheet" href="blogs.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -54,29 +61,28 @@
             <div class="manu">
                 <div class="nav">
                     <div class="nav-items">
-                        <a href="#chome">
+                        <a href="../index.html#chome">
                             <div class="n-logo">
-                                <img src="/img/dp 11.webp" alt="logo" class="logo">
+                                <img src="../img/dp 11.webp" alt="logo" class="logo">
                             </div>
                         </a>
 
                         <div class="n-items">
-                            <a href="/index.html">Home</a>
+                            <a href="../index.html#chome">Home</a>
                             <div class="dropdown">
                                 <button class="dropbtn">About </button>
                                 <div class="dropdown-content">
                                     <a href="about.html">About Page</a>
-                                    <a href="/index.html">Education</a>
-                                    <a href="#skills">Skills</a>
+                                    <a href="../index.html#skills">Skills</a>
                                 </div>
                             </div>
-                            <a href="#services">Services</a>
-                            <a href="#projects">Projects</a>
-                            <a href="#blogs">Blogs</a>
-                            <a href="#contact">Contact</a>
+                            <a href="../index.html#services">Services</a>
+                            <a href="projects/index.html">Projects</a>
+                            <a href="blog.html">Blogs</a>
+                            <a href="../index.html#contact">Contact</a>
                         </div>
                         <div class="btn">
-                            <a href="#contact">
+                            <a href="../index.html#contact">
                                 <button>
                                     <h3>Hire Me!</h3>
                                     <span class="material-symbols-outlined">
@@ -85,7 +91,7 @@
                             </a>
                         </div>
                     </div>
-                    <img src="sun.png" alt="" id="dark">
+                    <!-- <img src="../img/moon.png" alt="Toggle theme" id="dark"> -->
                 </div>
             </div>
         </div>
@@ -94,57 +100,149 @@
 
     <div id="Blogs-home">
         <div class="bhome">
-            <h2>Welcome to My Blogs</h2>
-            <h1>Hey, I am Dip</h1>
-
+            <h2 class="section-kicker">Welcome to My Blogs</h2>
+            <h1 class="section-title">Web Development Insights</h1>
+            <p class="section-subtitle">Articles, project notes, and frontend tips from a freelance web developer.</p>
         </div>
-        <div class="blog-container">
-            <div class="card">
-                <img src="https://picsum.photos/800/400?random=2" alt="Blog Image" />
+
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="blog-search" placeholder="Search by title, tag, or description...">
+                <button id="clear-search" class="clear-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+
+        <div class="blog-container" id="blog-container">
+            <!-- Card 1 -->
+            <div class="card" data-tags="architecture, frontend, react">
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&auto=format&fit=crop&q=80" alt="Clean Architecture in Frontend" />
+                    <span class="category-badge tag-react">Architecture</span>
+                </div>
                 <div class="card-content">
-                    <div class="card-title">Top 10 AI Tools You Must Try</div>
-                    <div class="card-text">These tools can boost productivity and expand your creative limits.</div>
+                    <div class="card-meta">
+                        <span class="meta-date">June 15, 2026</span>
+                        <span class="meta-dot">•</span>
+                        <span class="meta-read">5 min read</span>
+                    </div>
+                    <h2 class="card-title">Why Clean Architecture Matters in Frontend Projects</h2>
+                    <p class="card-text">How organizing your codebase around clean layers, single-responsibility components, and strict state boundaries can save hours of debugging.</p>
                     <div class="card-footer">
-                        <span>4 min read</span>
-                        <a href="#" class="read-btn">Read More</a>
+                        <span class="card-author">DM</span>
+                        <a href="#" class="read-btn">Read Article <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
-                <img src="https://picsum.photos/800/400?random=3" alt="Blog Image" />
+            <!-- Card 2 -->
+            <div class="card" data-tags="css, responsive, layout, design">
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=80" alt="Mastering CSS Grid and Flexbox" />
+                    <span class="category-badge tag-css">CSS Layout</span>
+                </div>
                 <div class="card-content">
-                    <div class="card-title">Top 10 AI Tools You Must Try</div>
-                    <div class="card-text">These tools can boost productivity and expand your creative limits.</div>
+                    <div class="card-meta">
+                        <span class="meta-date">May 28, 2026</span>
+                        <span class="meta-dot">•</span>
+                        <span class="meta-read">6 min read</span>
+                    </div>
+                    <h2 class="card-title">Mastering CSS Grid and Flexbox: The Complete Guide</h2>
+                    <p class="card-text">Understanding modern layout patterns, alignment quirks, and responsive grids without relying on heavy frameworks.</p>
                     <div class="card-footer">
-                        <span>4 min read</span>
-                        <a href="#" class="read-btn">Read More</a>
+                        <span class="card-author">DM</span>
+                        <a href="#" class="read-btn">Read Article <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
 
-
-            <div class="card">
-                <img src="https://picsum.photos/800/400?random=3" alt="Blog Image" />
+            <!-- Card 3 -->
+            <div class="card" data-tags="nextjs, seo, performance, react">
+                <div class="card-media">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80" alt="Next.js Performance & SEO" />
+                    <span class="category-badge tag-nextjs">Next.js & SEO</span>
+                </div>
                 <div class="card-content">
-                    <div class="card-title">Top 10 AI Tools You Must Try</div>
-                    <div class="card-text">These tools can boost productivity and expand your creative limits.</div>
+                    <div class="card-meta">
+                        <span class="meta-date">May 10, 2026</span>
+                        <span class="meta-dot">•</span>
+                        <span class="meta-read">8 min read</span>
+                    </div>
+                    <h2 class="card-title">Building High-Performance Websites with Next.js & SEO</h2>
+                    <p class="card-text">A walkthrough of core rendering modes, dynamic routing, metadata optimization, and web vitals checks for Google Search rankings.</p>
                     <div class="card-footer">
-                        <span>4 min read</span>
-                        <a href="#" class="read-btn">Read More</a>
+                        <span class="card-author">DM</span>
+                        <a href="#" class="read-btn">Read Article <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
+        </div>
 
-
-
-
-
-
-
+        <div id="no-results" class="no-results-state" style="display: none;">
+            <i class="fa-solid fa-face-frown search-empty-icon"></i>
+            <h2>No blogs found</h2>
+            <p>We couldn't find any articles matching your search criteria. Try different keywords.</p>
         </div>
     </div>
 
+    <script>
+        var savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+            document.body.classList.add("dark-mode");
+        }
+
+        // Live Search Logic
+        const searchInput = document.getElementById('blog-search');
+        const clearBtn = document.getElementById('clear-search');
+        const cards = document.querySelectorAll('.blog-container .card');
+        const container = document.getElementById('blog-container');
+        const noResults = document.getElementById('no-results');
+
+        if (searchInput) {
+            searchInput.addEventListener('input', function(e) {
+                const query = e.target.value.toLowerCase().trim();
+                let visibleCount = 0;
+
+                if (query.length > 0) {
+                    clearBtn.style.display = 'block';
+                } else {
+                    clearBtn.style.display = 'none';
+                }
+
+                cards.forEach(card => {
+                    const title = card.querySelector('.card-title').textContent.toLowerCase();
+                    const text = card.querySelector('.card-text').textContent.toLowerCase();
+                    const tags = card.getAttribute('data-tags') || '';
+                    
+                    if (title.includes(query) || text.includes(query) || tags.toLowerCase().includes(query)) {
+                        card.style.display = 'flex';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (visibleCount === 0) {
+                    container.style.display = 'none';
+                    noResults.style.display = 'flex';
+                } else {
+                    container.style.display = 'flex';
+                    noResults.style.display = 'none';
+                }
+            });
+        }
+
+        if (clearBtn) {
+            clearBtn.addEventListener('click', function() {
+                searchInput.value = '';
+                clearBtn.style.display = 'none';
+                cards.forEach(card => card.style.display = 'flex');
+                container.style.display = 'flex';
+                noResults.style.display = 'none';
+                searchInput.focus();
+            });
+        }
+    </script>
 </body>
 
 </html>
